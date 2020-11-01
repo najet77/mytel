@@ -1,5 +1,6 @@
+import React from "react";
 import "./App.css";
-
+import data from "./data";
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("sidebar-open");
 };
@@ -36,81 +37,25 @@ function App() {
       </aside>
       <main className="main">
         <ul className="products">
-          <li>
-            <div className="product">
-              <img
-                className="product-image"
-                src="/images/d1.jpg"
-                alt="product"
-              />
-              <div className="product-name">
-                <a href="product.html">Téléphone Samsung S10 plus</a>
+          {data.products.map((product) => (
+            <li>
+              <div className="product">
+                <img
+                  className="product-image"
+                  src={product.image}
+                  alt="product"
+                />
+                <div className="product-name">
+                  <a href="product.html">{product.name}</a>
+                </div>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">${product.price}</div>
+                <div className="product-rating">
+                  {product.rating} Stars (100 {product.numReviews})
+                </div>
               </div>
-              <div className="product-brand">Samsung</div>
-              <div className="product-price">$600</div>
-              <div className="product-rating">4.8 stars (100 reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img
-                className="product-image"
-                src="/images/d1.jpg"
-                alt="product"
-              />
-              <div className="product-name">
-                <a href="product.html">Téléphone Samsung S10 plus</a>
-              </div>
-              <div className="product-brand">Samsung</div>
-              <div className="product-price">$600</div>
-              <div className="product-rating">4.8 stars (100 reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img
-                className="product-image"
-                src="/images/d1.jpg"
-                alt="product"
-              />
-              <div className="product-name">
-                <a href="product.html">Téléphone Samsung S10 plus</a>
-              </div>
-              <div className="product-brand">Samsung</div>
-              <div className="product-price">$600</div>
-              <div className="product-rating">4.8 stars (100 reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img
-                className="product-image"
-                src="/images/d1.jpg"
-                alt="product"
-              />
-              <div className="product-name">
-                <a href="product.html">Téléphone Samsung S10 plus</a>
-              </div>
-              <div className="product-brand">Samsung</div>
-              <div className="product-price">$600</div>
-              <div className="product-rating">4.8 stars (100 reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img
-                className="product-image"
-                src="/images/d1.jpg"
-                alt="product"
-              />
-              <div className="product-name">
-                <a href="product.html">Téléphone Samsung S10 plus</a>
-              </div>
-              <div className="product-brand">Samsung</div>
-              <div className="product-price">$600</div>
-              <div className="product-rating">4.8 stars (100 reviews)</div>
-            </div>
-          </li>
+            </li>
+          ))}
         </ul>
       </main>
       <footer className="footer">All Rights are reserved</footer>
