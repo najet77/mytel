@@ -2,6 +2,7 @@
 export default {
   products: [
     {
+      _id: "1",
       name: "Samsung S10 Plus",
       brand: "Samsung",
       image: "/images/d1.jpg",
@@ -10,6 +11,7 @@ export default {
       numReviews: 25,
     },
     {
+      _id: "2",
       name: "Huawei y7",
       brand: "Huawei",
       image: "/images/d1.jpg",
@@ -18,6 +20,7 @@ export default {
       numReviews: 20,
     },
     {
+      _id: "3",
       name: "Samsung S11 Pro",
       brand: "Samsung",
       image: "/images/d1.jpg",
@@ -26,6 +29,7 @@ export default {
       numReviews: 35,
     },
     {
+      _id: "4",
       name: "Xiaomi Note 8",
       brand: "Xiaomi",
       image: "/images/d1.jpg",
